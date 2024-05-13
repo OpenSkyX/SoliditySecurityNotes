@@ -11,6 +11,7 @@ contract Phishable {
     
     receive () external payable {} // collect ether
 
+
     function withdrawAll(address _recipient) public {
         emit WithdrawAll(tx.origin);
         require(tx.origin == owner, "Not owner");
